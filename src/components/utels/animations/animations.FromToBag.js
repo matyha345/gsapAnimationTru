@@ -131,7 +131,7 @@ const animationsFromToBag = () => {
 			trigger: '._wrapper_tues0_9',
 			animation: productSocial,
 			start: 'top 100%',
-			end: 'bottom 65%',
+			end: 'bottom 75%',
 			scrub: true
 		})
 	}, 100)
