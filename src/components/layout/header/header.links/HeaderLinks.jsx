@@ -3,13 +3,16 @@ import { pagesLink } from '../data/pagesLink'
 import styles from './HeaderLinks.module.scss'
 import cn from 'clsx'
 import { useOnClickOutside } from '../../../hooks/useOnClickOutside'
+import { useState } from 'react'
 
 const HeaderLinks = () => {
 	const { ref, isShowSubMenu, setIsShowSubMenu } = useOnClickOutside(false)
+	const [isSubMenuOpen, setIsSubMenuOpen] = useState(false) // Новое состояние
 
 	const handleToggleSubMenu = () => {
-		setIsShowSubMenu(!isShowSubMenu)
+		setIsSubMenuOpen(!isSubMenuOpen)
 	}
+
 	return (
 		<div className={styles.item}>
 			{pagesLink.map((path, index) => (
@@ -17,7 +20,13 @@ const HeaderLinks = () => {
 					<Link
 						className={styles.link}
 						to={path.link}
-						onClick={handleToggleSubMenu}
+						onClick={() => {
+							if (path.name === 'продукция') {
+								handleToggleSubMenu()
+							} else {
+								setIsSubMenuOpen(false)
+							}
+						}}
 					>
 						{path.name}
 
@@ -25,8 +34,8 @@ const HeaderLinks = () => {
 							<ul
 								ref={ref}
 								className={cn(styles.subMenu, {
-									[styles.visible]: isShowSubMenu,
-									[styles.hidden]: !isShowSubMenu
+									[styles.visible]: isSubMenuOpen && path.name === 'продукция',
+									[styles.hidden]: !isSubMenuOpen || path.name !== 'продукция'
 								})}
 							>
 								<div className={styles.subMenuContent}>
