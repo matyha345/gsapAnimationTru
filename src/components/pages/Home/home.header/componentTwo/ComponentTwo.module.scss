@@ -1,0 +1,80 @@
+@import 'src/assets/animations.scss';
+@import 'src/assets/variables.scss';
+
+.componentTwo {
+    position: relative;
+	.componentSvg {
+		position: relative;
+
+		.componentOneText {
+			position: absolute;
+			top: 50%;
+			right: 0;
+
+			// display: flex;
+			align-items: center;
+
+			cursor: pointer;
+
+			span {
+				margin-right: 12px;
+			}
+		}
+	}
+
+	.componentLabel {
+        flex-direction: column;
+        position: absolute;
+        top: 50px;
+        right: 0;
+
+		.componentTitle {
+            text-align: end;
+			font-size: 72px;
+			font-style: normal;
+			font-weight: 700;
+			line-height: 125%;
+		}
+
+		.componentTitleText {
+            display: flex;
+            align-items: center;
+            justify-content: end;
+
+            margin-top: 18px;
+            span{
+                display: inline-block;
+                width: 88px;
+                height: 2px;
+                margin-right: 5px;
+                background-color: $borderCenter;
+            }
+		}
+	}
+
+	.buy {
+		position: absolute;
+		bottom: 10%;
+		right: 10%;
+
+		font-size: 16px;
+		font-style: normal;
+		font-weight: 550;
+		line-height: 135%; /* 21.6px */
+		letter-spacing: 0.48px;
+		text-transform: uppercase;
+
+		cursor: pointer;
+		border-bottom: 3px solid $borderCenter;
+	}
+}
+
+.visible {
+	display: flex;
+	animation: opacity 1s;
+}
+
+.hidden {
+	display: none;
+	animation: opacity 1s;
+}

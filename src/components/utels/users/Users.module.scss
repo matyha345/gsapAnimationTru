@@ -1,0 +1,18 @@
+@import 'src/assets/variables.scss';
+@import 'src/assets/animations.scss';
+
+.user {
+    cursor: pointer;
+
+
+
+    .visible {
+        display: block;
+        animation: opacity 0.5s;
+    }
+    
+    .hidden {
+        display: none;
+    }
+}
+

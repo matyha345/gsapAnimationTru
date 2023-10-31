@@ -1,0 +1,54 @@
+@import 'src/assets/variables.scss';
+@import 'src/assets/animations.scss';
+
+.wrapper {
+	padding: 96px 0;
+	.title {
+		text-align: center;
+
+		font-size: 40px;
+		font-style: normal;
+		font-weight: 700;
+		line-height: 135%; /* 54px */
+	}
+
+	.content {
+		margin-top: 80px;
+
+		.wrapperInner {
+            display: flex;
+            justify-content: center;
+			.inner {
+				display: flex;
+				justify-content: space-between;
+                max-width: 1200px;
+
+                .oneImg{
+                    max-width: 418px;
+
+                    margin-right: 15px;
+                }
+				.Group {
+					display: grid;
+					grid-template-columns: repeat(2, 1fr);
+					gap: 15px;
+
+                    .imgInner{
+                        max-width: 185px;
+                    }
+				}
+
+                .twoImg{
+                    max-width: 418px;
+
+                    margin-left: 15px;
+                }
+			}
+		}
+	}
+}
+
+img {
+	border-radius: 12px;
+
+}

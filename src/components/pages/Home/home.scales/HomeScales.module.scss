@@ -1,0 +1,54 @@
+@import 'src/assets/animations.scss';
+@import 'src/assets/variables.scss';
+
+.wrapper {
+	margin: 0 auto;
+	background-color: $bgTwo;
+	border-radius: 5px;
+    display: flex;
+	padding: 48px 0;
+
+	.img {
+		max-width: 670px;
+		width: 100%;
+	}
+
+	.main {
+		display: flex;
+		flex-direction: column;
+        max-width: 488px;
+
+		.title {
+            margin-top: 50px;
+			font-size: 40px;
+			font-style: normal;
+			font-weight: 700;
+			line-height: 135%; /* 54px */
+		}
+		p {
+            margin-top: 48px;
+			color: $textGray;
+			font-size: 16px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: 170%; /* 27.2px */
+
+			span {
+				color: #fff;
+			}
+		}
+
+		button {
+            margin-top: 148px;
+            color: $textGray;
+			font-size: 16px;
+			font-style: normal;
+			font-weight: 550;
+			line-height: 135%; /* 21.6px */
+			letter-spacing: 0.48px;
+			text-transform: uppercase;
+            cursor: pointer;
+            border-bottom: 1px solid $textGray;
+		}
+	}
+}

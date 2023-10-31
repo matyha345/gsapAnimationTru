@@ -1,0 +1,146 @@
+@import 'src/assets/animations.scss';
+@import 'src/assets/variables.scss';
+
+.wrapper {
+	margin: 48px 0;
+	display: flex;
+
+	.contentImg {
+		max-width: 530px;
+		max-height: 782px;
+		overflow: hidden;
+		padding: 20px 5px;
+		background-color: $bgTwo;
+		border-radius: 10px;
+
+		.title {
+			margin-left: 72px;
+			max-width: 362px;
+			margin-top: 72px;
+			font-size: 40px;
+			font-style: normal;
+			font-weight: 700;
+			line-height: 135%; /* 54px */
+		}
+
+		.texts {
+			margin-left: 72px;
+			margin-top: 48px;
+			color: $textGray;
+			font-size: 16px;
+			font-style: normal;
+			font-weight: 550;
+			line-height: 180%; /* 28.8px */
+		}
+
+		.img {
+			width: 100%;
+		}
+	}
+
+	.mainContent {
+		display: flex;
+		flex-direction: column;
+
+		justify-content: space-between;
+		width: 754px;
+		margin-left: 30px;
+		.blogOne {
+			height: 376px;
+			background-color: $bgTwo;
+			border-radius: 10px;
+			overflow: hidden;
+			position: relative;
+			// &::before {
+			// 	content: '';
+			// 	display: block;
+			// 	width: 100%;
+			// 	height: 100%;
+			// 	position: absolute;
+			// 	top: 10%;
+			// 	left: 31%;
+			// 	z-index: $zIdex10;
+			// 	background-image: url('images/profod.png');
+			// 	background-repeat: no-repeat;
+			// }
+
+			.blogOneWire{
+				content: '';
+				display: block;
+				width: 754px;
+				height: 754px;
+				position: absolute;
+				top: 10%;
+				left: 31%;
+				z-index: $zIdex10;
+			}
+			.blogOneDisk{
+				display: block;
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				top: 10%;
+				left: 65%;
+			}
+
+			.title {
+				max-width: 364px;
+				height: 100%;
+				display: flex;
+				align-items: center;
+				margin-left: 72px;
+
+				font-size: 20px;
+				font-style: normal;
+				font-weight: 550;
+				line-height: 160%; /* 32px */
+			}
+		}
+
+		.blogTwo {
+			height: 376px;
+			background-color: $bgTwo;
+			border-radius: 10px;
+			position: relative;
+			.more {
+				position: absolute;
+				top: 0;
+				right: 0;
+				cursor: pointer;
+				display: flex;
+				flex-direction: column;
+				align-items: end;
+				margin: 56px 48px 0 0;
+
+				span {
+					display: inline-block;
+					width: 85px;
+					border-bottom: 1px solid $borderCenter;
+				}
+			}
+
+			.titleBig {
+				display: flex;
+				height: 100%;
+				align-items: center;
+				justify-content: center;
+				h1 {
+					font-size: 200px;
+					font-style: normal;
+					font-weight: 700;
+					line-height: 135%; /* 270px */
+				}
+
+				h2 {
+					margin-left: 10px;
+					max-width: 211px;
+					font-size: 40px;
+					font-style: normal;
+					font-weight: 700;
+					line-height: 125%; /* 50px */
+					text-transform: uppercase;
+				}
+			}
+		}
+	}
+}

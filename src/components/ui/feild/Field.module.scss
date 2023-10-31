@@ -1,0 +1,18 @@
+@import 'src/assets/variables.scss';
+
+.wrapper {
+
+	.input {
+		border: 1px solid transparent;
+		padding: 10px 200px 10px 18px;
+		border-radius: 5px;
+		background: #25292b;
+
+		&::placeholder {
+			font-size: 14px;
+			font-weight: 400;
+			letter-spacing: 0.7px;
+			text-transform: uppercase;
+		}
+	}
+}

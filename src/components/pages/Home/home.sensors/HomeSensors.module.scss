@@ -1,0 +1,65 @@
+@import 'src/assets/variables.scss';
+@import 'src/assets/animations.scss';
+
+.wrapper {
+	margin: 48px 0;
+    padding: 48px 5px;
+    border-radius: 5px;
+    background-color: $bgTwo;
+
+	.titleMain {
+		text-align: center;
+		font-size: 40px;
+		font-style: normal;
+		font-weight: 700;
+		line-height: 135%; /* 54px */
+	}
+
+	.main {
+		display: flex;
+		justify-content: space-between;
+
+		.blogOne {
+			margin-top: 136px;
+
+			.title {
+				font-size: 24px;
+				font-style: normal;
+				font-weight: 700;
+				line-height: 150%; /* 36px */
+				margin-bottom: 28px;
+			}
+
+			.text {
+				font-size: 16px;
+				font-style: normal;
+				font-weight: 550;
+				line-height: 180%; /* 28.8px */
+				color: $textGray;
+			}
+		}
+
+        .img{
+            max-width: 672px;
+            width: 100%;
+        }
+
+		.blogTwo {
+            margin-top: 136px;
+			.title {
+                max-width: 271px;
+				font-size: 24px;
+				font-style: normal;
+				font-weight: 700;
+				line-height: 150%; /* 36px */
+			}
+
+            .btn{
+                margin-top: 32px;
+                cursor: pointer;
+                color: $borderLink;
+                border-bottom: $borderLink 1px solid;
+            }
+		}
+	}
+}

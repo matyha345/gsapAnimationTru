@@ -1,0 +1,51 @@
+@import 'src/assets/variables.scss';
+@import 'src/assets/animations.scss';
+
+.wrapper {
+	width: 418px;
+	height: 120px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border-radius: 28px;
+	cursor: pointer;
+
+	.content {
+		margin-left: 32px;
+		.text {
+			font-size: 14px;
+			font-style: normal;
+			font-weight: 550;
+			line-height: 150%; /* 21px */
+		}
+
+		.title {
+			font-size: 22px;
+			font-style: normal;
+			font-weight: 550;
+			line-height: 150%;
+		}
+	}
+
+	.svg {
+		background-color: #fff;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border-radius: 50%;
+		width: 48px;
+		height: 48px;
+		margin-right: 22px;
+	}
+
+	.svgAnd {
+		background-color: #FF3E41;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border-radius: 50%;
+		width: 48px;
+		height: 48px;
+		margin-right: 22px;
+	}
+}

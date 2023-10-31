@@ -1,0 +1,27 @@
+@import 'src/assets/variables.scss';
+@import'src/assets/animations.scss';
+.from {
+	cursor: pointer;
+	margin-right: 24px;
+	position: relative;
+
+	span {
+		img {
+			position: relative;
+			z-index: $zIdex100;
+		}
+	}
+}
+
+.visible {
+	display: block;
+	position: absolute;
+    top: -6px;
+	right: -15px;
+	z-index: $zIdex50;
+    animation: opacity 0.5s;
+}
+
+.hidden {
+	display: none;
+}

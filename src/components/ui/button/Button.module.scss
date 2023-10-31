@@ -1,0 +1,20 @@
+@import 'src/assets/variables.scss';
+@import 'src/assets/animations.scss';
+
+.btn {
+    cursor: pointer;
+	font-family: HelveticaNeueCyr;
+	font-size: 15px;
+	font-style: normal;
+	font-weight: 550;
+	line-height: 150%; /* 22.5px */
+
+	border: 1px solid #4e5051;
+	border-radius: 52px;
+
+	.inner {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+}

@@ -1,0 +1,21 @@
+@import 'src/assets/variables.scss';
+
+.wrapper{
+    position: absolute;
+    top: 63px;
+    right: -3px;
+    width: 200px;
+    height: 300px;
+    clip-path: polygon(9.96% 10.00%,44.53% 9.69%,50.51% 0.00%,57.35% 9.69%,90% 10%,90% 90%,10% 90%);
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $borderBottom;
+    z-index: $zIdex50;
+
+    .inner{
+        font-size: 20px;
+        color: $borderLink;
+    }
+}

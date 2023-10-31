@@ -1,0 +1,226 @@
+@import 'src/assets/animations.scss';
+@import 'src/assets/variables.scss';
+
+.wrapper {
+	background-color: $bgWhite;
+	box-shadow: 0 0 0 100vmax $bgWhite;
+	clip-path: inset(0 -100vmax);
+	color: $textBlack;
+	padding: 96px 0;
+
+	.titleMain {
+		text-align: center;
+		font-size: 40px;
+		font-style: normal;
+		font-weight: 700;
+		line-height: 135%; /* 54px */
+	}
+
+	.contentTop {
+		display: flex;
+		justify-content: space-between;
+		position: relative;
+		margin-top: 70px;
+		border-bottom: 1px solid #cbcecf;
+		.links {
+			display: flex;
+			width: 100%;
+			justify-content: center;
+			padding: 10px 0;
+
+			.linkOne {
+				cursor: pointer;
+				padding: 0 10px;
+				font-size: 18px;
+				font-style: normal;
+				font-weight: 550;
+				line-height: 135%; /* 24.3px */
+				border-bottom: 1px solid transparent;
+
+				&:hover {
+					border-bottom: 1px solid $textGray;
+				}
+			}
+
+			.linkTwo {
+				cursor: pointer;
+				color: $textGray;
+				margin-left: 50px;
+				padding: 0 10px;
+				font-size: 18px;
+				font-style: normal;
+				font-weight: 550;
+				line-height: 135%; /* 24.3px */
+
+				border-bottom: 1px solid transparent;
+
+				&:hover {
+					border-bottom: 1px solid $textGray;
+				}
+			}
+		}
+
+		.catalogue {
+			cursor: pointer;
+			position: absolute;
+			top: 0;
+			right: 0;
+			display: flex;
+			align-items: center;
+
+			font-size: 18px;
+			font-style: normal;
+			font-weight: 550;
+			line-height: 135%; /* 24.3px */
+		}
+	}
+
+	.contentSwiper {
+		margin-top: 56px;
+		display: flex;
+		width: 100%;
+		position: relative;
+		.inner {
+			padding: 48px 24px;
+			background-color: #f5f5f5;
+			max-width: 418px;
+			max-height: 595px;
+			border-radius: 38px;
+
+			.title {
+				max-width: 242px;
+				font-size: 18px;
+				font-style: normal;
+				font-weight: 550;
+				line-height: 150%; /* 27px */
+			}
+
+			img {
+				margin-top: 26px;
+				max-width: 370px;
+				width: 100%;
+			}
+
+			.innerBottom {
+				display: flex;
+				justify-content: space-between;
+
+				.prise {
+					h3 {
+						color: #7f8589;
+						font-size: 13px;
+						font-style: normal;
+						font-weight: 400;
+						line-height: 125%; /* 16.25px */
+					}
+
+					.number {
+						display: flex;
+						align-items: center;
+						.discount {
+							color: #7f8589;
+							font-size: 24px;
+							font-style: normal;
+							font-weight: 400;
+							line-height: 125%; /* 30px */
+							text-decoration-line: line-through;
+						}
+						.prise {
+							margin-left: 11px;
+							color: #1b1f22;
+							font-size: 24px;
+							font-style: normal;
+							font-weight: 700;
+							line-height: 125%; /* 30px */
+						}
+					}
+				}
+
+				.innerSvg {
+					display: flex;
+					align-items: center;
+
+					.cart {
+						display: flex;
+						align-items: center;
+						justify-content: center;
+						width: 40px;
+						height: 40px;
+						background-color: #ff3e41;
+						border-radius: 10px;
+						position: relative;
+
+						cursor: pointer;
+
+						&::before {
+							content: '';
+							position: absolute;
+							top: 50%;
+							left: 50%;
+							transform: translate(-50%, -50%);
+							background-image: url('svg/swiper/Cart.svg');
+							width: 28px;
+							height: 28px;
+							background-repeat: no-repeat;
+						}
+					}
+
+					.arrow {
+						margin-left: 10px;
+						cursor: pointer;
+						width: 40px;
+						height: 40px;
+						background-color: #1b1f22;
+						border-radius: 10px;
+						position: relative;
+						&::before {
+							content: '';
+							position: absolute;
+							top: 50%;
+							left: 50%;
+							transform: translate(-50%, -50%);
+							background-image: url('svg/swiper/right.svg');
+							width: 14px;
+							height: 12px;
+							background-repeat: no-repeat;
+						}
+					}
+				}
+			}
+		}
+		.controler {
+			display: flex;
+			position: absolute;
+			top: -40px;
+			right: 0;
+			z-index: $zIdex100;
+
+			.next {
+				border-radius: 50%;
+				cursor: pointer;
+			}
+
+			.prev {
+				border-radius: 50%;
+				color: #ff3e41;
+				cursor: pointer;
+			}
+
+			.next,
+			.prev {
+				transition: all 0.3s ease-in-out;
+
+				&:hover {
+					transform: scale(1.05);
+					opacity: 0.7;
+				}
+
+				&:active {
+					position: relative;
+					top: 1px;
+					right: 0;
+				}
+			}
+		}
+	}
+}

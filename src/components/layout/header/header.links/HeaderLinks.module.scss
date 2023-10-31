@@ -1,0 +1,93 @@
+@import 'src/assets/variables.scss';
+@import 'src/assets/animations.scss';
+.item {
+	max-width: 600px;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: space-between;
+
+	.list {
+		display: block;
+		height: 100%;
+		position: relative;
+		z-index: $zIdex50;
+
+		&::after {
+			content: '';
+			position: absolute;
+			top: 57px;
+			left: 0;
+			bottom: -6px;
+			width: 100%;
+			height: 3px;
+			background: $borderLink;
+			border-radius: 5px;
+			transform-origin: right;
+			transform: scaleX(0);
+			transition: transform 0.5s;
+		}
+		&:hover::after {
+			transform: scaleX(1);
+			transform-origin: left;
+			background: $borderLink;
+		}
+
+		.link {
+			color: $colorLink;
+			font-size: 14px;
+			font-weight: 400;
+			letter-spacing: 0.7px;
+			text-transform: uppercase;
+			position: relative;
+
+			&:hover {
+				color: $textNormal;
+				opacity: 1.2;
+			}
+
+			.subMenu {
+				position: absolute;
+				top: 83px;
+				left: -42px;
+				display: block;
+				width: 333px;
+				height: 204px;
+				cursor: auto;
+
+				&::after {
+					content: '';
+					display: block;
+					position: absolute;
+					top: -30px;
+					left: -3px;
+					z-index: -1;
+					background-image: url('svg/Rectangle.svg');
+					width: 333px;
+					height: 204px;
+					background-repeat: no-repeat;
+				}
+
+				.subMenuLinks {
+					padding: 8px 15px;
+					.subMenuLink {
+						font-size: 18px;
+						font-style: normal;
+						font-weight: 400;
+						line-height: normal;
+						&:hover {
+							opacity: 0.7;
+						}
+					}
+				}
+
+				&.visible {
+				}
+
+				&.hidden {
+					display: none;
+				}
+			}
+		}
+	}
+}
