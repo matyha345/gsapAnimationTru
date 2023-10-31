@@ -32,11 +32,11 @@ const HeaderLinks = () => {
 
 						{path.subMenu && (
 							<ul
-								ref={ref}
 								className={cn(styles.subMenu, {
 									[styles.visible]: isSubMenuOpen && path.name === 'продукция',
 									[styles.hidden]: !isSubMenuOpen || path.name !== 'продукция'
 								})}
+								ref={ref}
 							>
 								<div className={styles.subMenuContent}>
 									{path.subMenu.map((subItem, subIndex) => (
@@ -47,6 +47,9 @@ const HeaderLinks = () => {
 										</li>
 									))}
 								</div>
+								<span>
+									<img src='svg/rectangle.svg' alt='#' />
+								</span>
 							</ul>
 						)}
 					</Link>
